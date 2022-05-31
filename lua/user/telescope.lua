@@ -101,4 +101,8 @@ telescope.setup {
   },
 }
 
-require('telescope').load_extension('fzf')
+if telescope.extensions and telescope.extensions.fzf then
+  pcall(function()
+    require('telescope').load_extension('fzf')
+  end)
+end
