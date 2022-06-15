@@ -6,7 +6,7 @@ end
 local configs = require("nvim-treesitter.configs")
 configs.setup {
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-  ensure_installed = { "lua", "ruby", "javascript", "typescript", "json", "yaml", "markdown" },
+  ensure_installed = { "lua", "ruby", "javascript", "typescript", "json", "yaml", "markdown", "json" },
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
     enable = true,
@@ -16,7 +16,7 @@ configs.setup {
     disable = { "" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  indent = { enable = true, disable = { "yaml" } },
+  indent = { enable = true, disable = { } },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
