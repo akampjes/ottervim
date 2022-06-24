@@ -81,6 +81,21 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+  -- copilot
+  -- First you need to install copilot to authenticate and run `:Copilot setup` to authenticate for the first time.
+  --use "github/copilot.vim"
+  use {
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    config = function ()
+      vim.schedule(function() require("user.copilot") end)
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    module = "copilot_cmp",
+  }
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
