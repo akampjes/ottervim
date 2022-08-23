@@ -84,17 +84,17 @@ return packer.startup(function(use)
   -- copilot
   -- First you need to install copilot to authenticate and run `:Copilot setup` to authenticate for the first time.
   --use "github/copilot.vim"
-  use {
-    "zbirenbaum/copilot.lua",
-    event = "InsertEnter",
-    config = function ()
-      vim.schedule(function() require("user.copilot") end)
-    end,
-  }
-  use {
-    "zbirenbaum/copilot-cmp",
-    module = "copilot_cmp",
-  }
+  --use {
+  --  "zbirenbaum/copilot.lua",
+  --  event = "InsertEnter",
+  --  config = function ()
+  --    vim.schedule(function() require("user.copilot") end)
+  --  end,
+  --}
+  --use {
+  --  "zbirenbaum/copilot-cmp",
+  --  module = "copilot_cmp",
+  --}
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
